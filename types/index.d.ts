@@ -151,6 +151,7 @@ declare interface BankInfoProps {
 declare interface HeaderBoxProps {
   type?: "title" | "greeting";
   title: string;
+  description: string;
   subtext: string;
   user?: string;
 }

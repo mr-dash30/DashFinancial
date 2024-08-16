@@ -216,6 +216,10 @@
     @apply text-24 lg:text-30 font-semibold text-gray-900;
   }
 
+  .header-box-title-user {
+    @apply text-24 lg:text-30 font-semibold text-bankGradient;
+  }
+
   .header-box-subtext {
     @apply text-14 lg:text-16 font-normal text-gray-600;
   }
