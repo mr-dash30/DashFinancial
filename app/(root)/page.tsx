@@ -2,9 +2,11 @@ import HeaderBox from '@/components/HeaderBox'
 import TotalBalanceBox from '@/components/TotalBalanceBox'
 import RightSideBar from '@/components/RightSideBar'
 import React from 'react'
+import { get } from 'http'
+import { getLoggedInUser } from '@/lib/action/user.actions'
 
-const Home = () => {
-    const loggedIn = { firstName: 'Darshan', lastName: 'Patel' , email: 'dash@gmail.com'}
+const Home = async() => {
+    const loggedIn = await getLoggedInUser();
   return (
     <section className='home'>
         <div className='home-content'>
@@ -13,7 +15,7 @@ const Home = () => {
                 type = "greeting"
                 title = "Welcome to Dash"
                 description = "Access your account information, make payments, and more from the comfort of your home."
-                user= {loggedIn?.firstName + ' ' + loggedIn?.lastName || 'Guest'} 
+                user= {loggedIn?.name || 'Guest'} 
                 subtext='Get started by selecting an option below.'
                 />
                 <TotalBalanceBox 

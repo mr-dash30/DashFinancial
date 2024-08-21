@@ -13,7 +13,7 @@ const BankCard = ({
             <Link href="/" className='bank-card'>
                 <div className='bank-card_content'>
                     <div>
-                        <h1 className='text-xl font-bold text-white'>{account?.bankName || 'CIBC'}</h1>
+                        <h1 className='text-xl font-bold text-white'>{account?.officialName || 'CIBC'}</h1>
                         <p className='font-ibm-plex-serif font-black text-white'>{formatAmount(account.currentBalance)}</p>
                     </div>
                     <article className='flex flex-col gap-2'>
